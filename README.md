@@ -5,7 +5,7 @@
 #### 프로그래머스
 
 <b>🌱 LV.1</b> [코드보기](https://github.com/nohriter/Algorithm/tree/main/src/programmers/lv1)
-- [2016년
+- 2016년
 - 나누어 떨어지는 숫자배열
 - 두개 뽑아서 더하기
 - 로또의 최고 순위와 최저 순위
