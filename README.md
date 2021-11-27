@@ -29,3 +29,10 @@
 - Number Line Jumps
 - Time Conversion
 
+####리트코드
+
+<b>🌱 Easy</b> [코드보기](https://github.com/nohriter/Algorithm/tree/main/src/leetcode)
+- Palindrome_Number
+- Reverse Integer
+- Two Sum
+
