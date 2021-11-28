@@ -18,6 +18,9 @@
 - 핸드폰 번호 가리기
 - x만큼 간격이 있는 n개의 숫자
 - 직사각형 별찍기
+- 행렬의 덧셈
+- 평균구하기
+- 하샤드 수
 ---
 
 #### 해커랭크
@@ -29,7 +32,9 @@
 - Number Line Jumps
 - Time Conversion
 
-####리트코드
+---
+
+#### 리트코드
 
 <b>🌱 Easy</b> [코드보기](https://github.com/nohriter/Algorithm/tree/main/src/leetcode)
 - Palindrome_Number
