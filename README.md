@@ -63,3 +63,5 @@
 - Reverse Integer
 - Two Sum
 
+#### 이것이 코딩 테스트다
+- 큰 수의 법칙
