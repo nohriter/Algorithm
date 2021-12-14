@@ -9,11 +9,6 @@ import java.util.Collections;
 public class chap03_큰_수의_법칙 {
 
     public static void main(String[] args) throws IOException {
-        // M번 더하여 가장 큰 수를 만든다.
-        // K번을 초과해서 더해질 수 없다.
-        // 가장 큰 수를 알아야 한다.
-        // 두번째로 큰 수를 알아야 한다. 내림차순으로 정렬을 해서 꺼낼까?
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String inputRules = br.readLine();
@@ -32,7 +27,7 @@ public class chap03_큰_수의_법칙 {
         int sum = 0; // 합을 구하기 위한 변수
 
         for (int i = 0; i < m; i++) {
-            if(k > 0) {      // 연속 가능한 횟수가 0보다 클 때
+            if (k > 0) {      // 연속 가능한 횟수가 0보다 클 때
                 sum += max;  // 가장 큰 수를 더한다.
                 k--;         // 연속 가능한 횟수를 차감.
                 continue;    // 다음 반복으로 넘어간다.
