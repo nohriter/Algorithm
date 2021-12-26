@@ -1,4 +1,4 @@
-package this_is_coding_test.greedy;
+package this_is_coding_test.그리디;
 
 import java.io.BufferedReader;
 import java.io.IOException;
