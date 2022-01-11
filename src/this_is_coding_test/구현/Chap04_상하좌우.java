@@ -1,9 +1,8 @@
-package this_is_coding_test.greedy;
+package this_is_coding_test.구현;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Chap02_상하좌우 {
+public class Chap04_상하좌우 {
 
     public static void main(String[] args) {
 
