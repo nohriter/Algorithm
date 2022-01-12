@@ -1,6 +1,8 @@
 package this_is_coding_test.정렬;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Chap06_위에서_아래로 {
 
@@ -10,6 +12,7 @@ public class Chap06_위에서_아래로 {
         int n = sc.nextInt();
 
         Integer[] arr = new Integer[n];
+
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
@@ -19,6 +22,7 @@ public class Chap06_위에서_아래로 {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
+
     }
 
 }

@@ -1,52 +1,27 @@
 package this_is_coding_test.정렬;
 
-import java.util.*;
-
-class Student implements Comparable<Student> {
-
-    private String name;
-    private int score;
-
-    public Student(String name, int score) {
-        this.name = name;
-        this.score = score;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public int getScore() {
-        return this.score;
-    }
-
-    @Override
-    public int compareTo(Student other) {
-        if (this.score < other.score) {
-            return -1;
-        }
-        return 1;
-    }
-}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 public class Chap06_성적이_낮은순서대로 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
 
-        List<Student> students = new ArrayList<>();
+        SortedMap<Integer, String> map = new TreeMap<>();
+
         for (int i = 0; i < n; i++) {
-            String name = sc.next();
-            int score = sc.nextInt();
-            students.add(new Student(name, score));
+            String[] s = br.readLine().split(" ");
+            map.put(Integer.parseInt(s[1]), s[0]);
         }
 
-        Collections.sort(students);
-
-        for (int i = 0; i < students.size(); i++) {
-            System.out.print(students.get(i).getName() + " ");
-        }
+        map.keySet().forEach(key -> {
+            System.out.println(key + " -> " + map.get(key));
+        });
     }
 }
