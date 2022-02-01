@@ -1,21 +1,8 @@
 package programmers.lv1;
 
-import week3.Crain;
-
 import java.util.Stack;
 
 public class Prg_크레인_인형뽑기2 {
-
-    public static void main(String[] args) {
-        Crain crain = new Crain();
-
-        int[][] board = {{0, 0, 0, 0, 0},
-                {0, 0, 1, 0, 3}, {0, 2, 5, 0, 1}, {4, 2, 4, 4, 2}, {3, 5, 1, 3, 1}};
-        int[] moves = {1, 5, 3, 5, 1, 2, 1, 4};
-
-        crain.solution(board, moves);
-    }
-
 
     public int solution(int[][] board, int[] moves) {
         int answer = 0;

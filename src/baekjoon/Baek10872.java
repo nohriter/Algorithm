@@ -1,8 +1,8 @@
-package backjoon;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class Back10872 {
+public class Baek10872 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

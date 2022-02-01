@@ -1,11 +1,11 @@
-package backjoon;
+package baekjoon;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Back18352 {
+public class Baek18352 {
 
     public static int n, m, k, x;
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();

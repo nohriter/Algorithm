@@ -1,9 +1,9 @@
-package backjoon;
+package baekjoon;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Back11399 {
+public class Baek11399 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
