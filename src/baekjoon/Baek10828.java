@@ -1,61 +1,89 @@
 package baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Baek10828 {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Stack stack = new Stack();
+    public static int[] stack;
+    public static int size = 0;
 
-        int N = Integer.parseInt(br.readLine());
+    public static void main(String[] args) {
 
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < N; i++) {
-            sb.append(br.readLine() + "\n");
+        Scanner in = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
+
+        int N = in.nextInt();
+
+        stack = new int[N];
+
+        for(int i = 0; i < N; i++) {
+
+            String str = in.next();
+
+            switch (str) {
+
+                case "push":
+                    push(in.nextInt());
+                    break;
+
+                case "pop":
+                    sb.append(pop()).append('\n');
+                    break;
+
+                case "size":
+                    sb.append(size()).append('\n');
+                    break;
+
+                case "empty":
+                    sb.append(empty()).append('\n');
+                    break;
+
+                case "top":
+                    sb.append(top()).append('\n');
+                    break;
+            }
+
         }
-
-        sb.
-
-
+        System.out.println(sb);
     }
+
+    public static void push(int item) {
+        stack[size] = item;
+        size++;
+    }
+
+    public static int pop() {
+        if(size == 0) {
+            return -1;
+        }
+        else {
+            int res = stack[size - 1];
+            stack[size - 1] = 0;
+            size--;
+            return res;
+        }
+    }
+
+    public static int size() {
+        return size;
+    }
+
+    public static int empty() {
+        if(size == 0) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    public static int top() {
+        if(size == 0) {
+            return -1;
+        }
+        else {
+            return stack[size - 1];
+        }
+    }
+
 }
-//
-//for (int i = 0; i < N; i++) {
-//        String input = br.readLine();
-//        String[] commands = input.split(" ");
-//        input = commands[0];
-//        switch (input) {
-//        case "push":
-//        stack.push(commands[1]);
-//        break;
-//        case "top":
-//        if (stack.empty()) {
-//        System.out.println("-1");
-//        } else {
-//        System.out.println(stack.peek());
-//        }
-//        break;
-//        case "pop":
-//        if (stack.empty()) {
-//        System.out.println("-1");
-//        } else {
-//        System.out.println(stack.pop());
-//        }
-//        break;
-//        case "size":
-//        System.out.println(stack.size());
-//        break;
-//        case "empty":
-//        if (stack.empty()) {
-//        System.out.println("1");
-//        } else {
-//        System.out.println("0");
-//        }
-//        break;
-//        }
-//        }
