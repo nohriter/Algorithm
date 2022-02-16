@@ -87,5 +87,3 @@ public class Baek10866 {
         System.out.println(sb);
     }
 }
-
-}
