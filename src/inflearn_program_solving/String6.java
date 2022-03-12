@@ -10,20 +10,18 @@ public class String6 {
         solution(input);
     }
 
-    private static String solution(String input) {
+    private static void solution(String input) {
         String[] split = input.split("");
 
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
 
         for (String s : split) {
-            if(!answer.contains(s)) {
-               answer += s;
+            if(!answer.toString().contains(s)) {
+               answer.append(s);
             }
         }
 
         System.out.println(answer);
-
-        return answer;
     }
 
 }
