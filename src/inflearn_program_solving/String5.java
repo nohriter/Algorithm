@@ -1,7 +1,7 @@
 package inflearn_program_solving;
 
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class String5 {
 
@@ -15,15 +15,33 @@ public class String5 {
         int lt = 0;
         int rt = chars.length-1;
 
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < chars.length; i++) {
-            if((65 <= chars[i] &&  chars[i] <= 90) || (97 <= chars[i] && chars[i] <= 122)) {
-
+        while (lt < rt) {
+            if(!isAlphabet(chars[lt])) {
+                lt++;
+            }else if(!isAlphabet(chars[rt])) {
+                rt--;
+            }else {
+                char temp = chars[lt];
+                chars[lt] = chars[rt];
+                chars[rt] = temp;
+                lt++;
+                rt--;
             }
-            sb.append(chars[i]);
         }
 
+        StringBuilder sb = new StringBuilder();
+        for (char aChar : chars) {
+            sb.append(aChar);
+        }
+
+        System.out.println(sb);
     }
 
+    public static boolean isAlphabet(char c) {
+        if((65 <= c &&  c <= 90) || (97 <= c && c <= 122)) {
+            return true;
+        }
+
+        return false;
+    }
 }
