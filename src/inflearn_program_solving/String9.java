@@ -1,26 +1,21 @@
 package inflearn_program_solving;
 
-import java.util.Scanner;
-
+import java.util.*;
 public class String9 {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        solution(input);
-    }
-
-    public static void solution(String input) {
-        char[] chars = input.toCharArray();
-        for (char c : chars) {
-            if(isNumber(c)) {
-
-            }
+    public String solution(String str){
+        String answer="YES";
+        str=str.toUpperCase();
+        int len=str.length();
+        for(int i=0; i<len/2; i++){
+            if(str.charAt(i)!=str.charAt(len-i-1)) answer="NO";
         }
+        return answer;
     }
 
-    private static boolean isNumber(char c) {
-
+    public static void main(String[] args){
+        String9 T = new String9();
+        Scanner kb = new Scanner(System.in);
+        String str=kb.next();
+        System.out.print(T.solution(str));
     }
-
 }
