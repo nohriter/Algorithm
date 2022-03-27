@@ -1,4 +1,4 @@
-package inflearn_program_solving;
+package inflearn_program_solving.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
