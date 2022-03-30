@@ -1,15 +1,26 @@
 package inflearn_program_solving.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array4 {
 
     public static void solution(int input) {
-        int temp = 0;
+        int[] answer = new int[input];
+        answer[0] = 1;
+        answer[1] = 1;
 
-        for (int i = 0; i < input; i++) {
-
+        for (int i = 2; i < input; i++) {
+            answer[i] = answer[i-1] + answer[i -2];
         }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i : answer) {
+            sb.append(i + " ");
+        }
+
+        System.out.println(sb.toString().trim());
     }
 
     public static void main(String[] args) {
