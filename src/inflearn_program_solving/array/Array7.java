@@ -1,26 +1,31 @@
 package inflearn_program_solving.array;
 
 import java.util.*;
+
 class Array7 {
-    public int solution(int n, int[] arr){
-        int answer=0, cnt=0;
-        for(int i=0; i<n; i++){
-            if(arr[i]==1){
-                cnt++;
-                answer+=cnt;
+    public static void solution(int[] arr) {
+        int answer = 0;
+        int flag = 1;
+
+        for (int i : arr) {
+            if (i == 1) {
+                answer += flag;
+                flag++;
+            } else {
+                flag = 1;
             }
-            else cnt=0;
         }
-        return answer;
+
+        System.out.println(answer);
     }
-    public static void main(String[] args){
-        Array7 T = new Array7();
-        Scanner kb = new Scanner(System.in);
-        int n=kb.nextInt();
-        int[] arr=new int[n];
-        for(int i=0; i<n; i++){
-            arr[i]=kb.nextInt();
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.parseInt(scanner.nextLine());
+        int[] answers = new int[number];
+        for (int i = 0; i < number; i++) {
+            answers[i] = scanner.nextInt();
         }
-        System.out.print(T.solution(n, arr));
+        solution(answers);
     }
 }
