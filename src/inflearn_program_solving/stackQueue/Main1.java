@@ -12,7 +12,6 @@ public class Main1 {
             if(aChar == '(') {
                 stack.push(aChar);
             } else {
-                if(stack.isEmpty()) return "NO";
                 stack.pop();
             }
         }
