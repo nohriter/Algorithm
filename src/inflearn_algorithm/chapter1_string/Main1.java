@@ -1,4 +1,4 @@
-package inflearn_algorith.chapter1_string;
+package inflearn_algorithm.chapter1_string;
 
 import java.util.*;
 
