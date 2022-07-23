@@ -1,4 +1,4 @@
-package algorithm_codingtest.basic.data_structure.chapter1_배열과리스트;
+package algorithm_codingtest.basic.data_structure.chapter1_arrayAndList;
 
 import java.util.Scanner;
 
