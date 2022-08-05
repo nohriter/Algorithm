@@ -7,46 +7,30 @@ public class P2018 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int N = sc.nextInt();
 
-        // 초기화
-        int[] numbers = new int[n];
-        for (int i = 1; i <= numbers.length; i++) {
-            numbers[i - 1] = i;
-        }
-
+        int lt = 1;
+        int rt = 1;
         int sum = 1;
         int count = 1;
-        int startIndex = 1;
-        int endIndex = 1;
+        int m = N / 2 + 2;
+        while (rt != N) {
 
-        while (endIndex != n) {
-
-            if (numbers[startIndex] == numbers[endIndex]) {
-                endIndex++;
-                continue;
-            }
-
-            sum += numbers[endIndex];
-
-            if (sum > n) {
-                startIndex++;
-                endIndex += startIndex;
-                sum = 0;
-                break;
-            }
-
-            if (sum == n) {
+            if (sum == N) {
                 count++;
-                startIndex++;
-                endIndex += startIndex;
-                sum = 0;
-                break;
+                rt++;
+                sum += rt;
+            } else if (sum < N) {
+                rt++;
+                sum += rt;
+            } else {
+                sum -= lt;
+                lt++;
+
             }
 
-            endIndex++;
-        }
 
+        }
 
         System.out.println(count);
     }
