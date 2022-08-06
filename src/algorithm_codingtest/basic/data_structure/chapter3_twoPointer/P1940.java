@@ -1,5 +1,6 @@
 package algorithm_codingtest.basic.data_structure.chapter3_twoPointer;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class P1940 {
@@ -17,11 +18,25 @@ public class P1940 {
             arr[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < N; i++) {
-            for (int j = i + 1; j < N; j++) {
-                if (arr[i] + arr[j] == M) {
-                    answer++;
-                }
+        Arrays.sort(arr);
+
+        int lt = 0;
+        int rt = arr.length - 1;
+
+        while (rt > lt) {
+
+            if (arr[lt] + arr[rt] == M) {
+                answer++;
+                rt--;
+                lt++;
+            }
+
+            if (arr[lt] + arr[rt] > M) {
+                rt--; // 값을 더작게 만듬
+            }
+
+            if (arr[lt] + arr[rt] < M) {
+                lt++; // 값을 더크게 만듬
             }
         }
 
