@@ -1,35 +1,38 @@
 package inflearn_algorithm.chapter3_twoPointers;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main3 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
-        scanner(n, k, a);
-    }
+    public static void main(String[] args) throws IOException {
 
-    private static void scanner(int n, int k, int[] a) {
-        int max = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
+
+        int[] arr = new int[N];
         int sum = 0;
 
-        for (int i = 0; i < k; i++) {
-            sum += a[i];
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        max = sum;
+        for (int i = 0; i < K; i++) {
+            sum += arr[i];
+        }
 
-        for (int i = k; i < n; i++) {
-            sum += a[i] - a[i-k];
-            if(max < sum) {
-                max = sum;
-            }
+        int max = sum;
+
+        for (int lt = K; lt < N - K; lt++) {
+            sum += arr[lt];
+            sum -= arr[lt - K];
+
         }
 
         System.out.println(max);
