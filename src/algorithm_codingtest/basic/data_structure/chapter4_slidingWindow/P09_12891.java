@@ -1,4 +1,4 @@
-package algorithm_codingtest.basic.data_structure.chapter3_twoPointer;
+package algorithm_codingtest.basic.data_structure.chapter4_slidingWindow;
 
 import java.io.BufferedReader;
 import java.io.IOException;
