@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class REP1546 {
+public class REP02_1546 {
 
     public static void main(String[] args) {
 

@@ -1,9 +1,8 @@
 package algorithm_codingtest.basic.data_structure.chapter1_arrayAndList.resolve;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class REP11720 {
+public class REP01_11720 {
 
     public static void main(String[] args) {
 

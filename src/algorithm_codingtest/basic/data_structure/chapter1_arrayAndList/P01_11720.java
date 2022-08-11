@@ -2,7 +2,7 @@ package algorithm_codingtest.basic.data_structure.chapter1_arrayAndList;
 
 import java.util.Scanner;
 
-public class P11720 {
+public class P01_11720 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

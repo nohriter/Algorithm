@@ -3,7 +3,7 @@ package algorithm_codingtest.basic.data_structure.chapter3_twoPointer;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P1940 {
+public class P07_1940 {
 
     public static void main(String[] args) {
         // 시간제한 2초

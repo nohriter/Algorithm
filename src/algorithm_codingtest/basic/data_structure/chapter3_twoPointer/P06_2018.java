@@ -2,7 +2,7 @@ package algorithm_codingtest.basic.data_structure.chapter3_twoPointer;
 
 import java.util.Scanner;
 
-public class P2018 {
+public class P06_2018 {
 
     public static void main(String[] args) {
 

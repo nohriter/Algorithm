@@ -2,7 +2,7 @@ package algorithm_codingtest.basic.data_structure.chapter3_twoPointer.resolve;
 
 import java.util.Scanner;
 
-public class REP2018 {
+public class REP06_2018 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

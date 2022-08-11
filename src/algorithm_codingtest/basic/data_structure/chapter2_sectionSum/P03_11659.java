@@ -2,7 +2,7 @@ package algorithm_codingtest.basic.data_structure.chapter2_sectionSum;
 
 import java.util.Scanner;
 
-public class P11659 {
+public class P03_11659 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

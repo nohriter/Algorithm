@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class P12981 {
+public class P09_12891 {
     static int[] goodArr = new int[4];
     static int[] checkArr = new int[4];
 
