@@ -43,7 +43,9 @@ public class P12_17298 {
             sb.append(answer[i]).append(' ');
         }
 
-        System.out.println(sb);
+        for (int i = 0; i < answer.length; i++) {
+            System.out.println(answer[i] + " ");
+        }
     }
 
 }
