@@ -1,31 +1,29 @@
 package baekjoon;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.Stack;
 
 public class Baek9093 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int num = sc.nextInt();
-        Stack<Character> stack = new Stack<Character>();
-        sc.nextLine();
+        int N = Integer.parseInt(sc.nextLine());
+        ;
+        Stack<Character> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
 
-        while(num-- > 0) {
-            String input = sc.nextLine()+" ";
-            for(int i = 0; i < input.length(); i++) {
-                if(input.charAt(i) == ' ') {
-                    while(!stack.isEmpty()) {
-                        System.out.print(stack.pop());
-                    }
-                    System.out.print(" ");
-                } else
-                    stack.push(input.charAt(i));
+        for (int i = 0; i < N; i++) {
+            String s = sc.nextLine();
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ' ') {
+                    while (!stack.empty()) sb.append(stack.pop());
+                    sb.append(" ");
+                } else stack.add(s.charAt(j));
             }
-            System.out.println();
+            while (!stack.empty()) sb.append(stack.pop());
+            sb.append("\n");
         }
-
-        sc.close();
-        return;
+        System.out.println(sb);
     }
 }
