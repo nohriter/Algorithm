@@ -6,37 +6,30 @@ import java.util.Stack;
 public class Baek9012 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner in = new Scanner(System.in);
+        int N = Integer.parseInt(sc.nextLine());
 
-        int T = in.nextInt();
+        for (int i = 0; i < N; i++) {
+            Stack<Character> stack = new Stack<>();
+            String str = sc.nextLine();
 
-        for (int i = 0; i < T; i++) {
-            System.out.println(solve(in.next()));
-        }
-    }
+            for (int j = 0; j < str.length(); j++) {
+                char c = str.charAt(j);
 
-    public static String solve(String s) {
-
-        Stack<Character> stack = new Stack<>();
-
-        for (int i = 0; i < s.length(); i++) {
-
-            char c = s.charAt(i);
-
-            if (c == '(') {
-                stack.push(c);
-            } else if (stack.empty()) {
-                return "NO";
-            } else {
-                stack.pop();
+                if (c == '(') {
+                    stack.push(c);
+                } else if (stack.isEmpty()) {
+                    stack.push(c);
+                    break;
+                } else stack.pop();
             }
+
+            if (stack.isEmpty()) {
+                System.out.println("YES");
+            } else System.out.println("NO");
         }
 
-        if (stack.empty()) {
-            return "YES";
-        } else {
-            return "NO";
-        }
     }
+
 }
