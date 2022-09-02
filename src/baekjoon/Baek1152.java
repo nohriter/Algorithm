@@ -7,6 +7,7 @@ public class Baek1152 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+
         String s = sc.nextLine();
         if (s.isBlank()) {
             System.out.println("0");
