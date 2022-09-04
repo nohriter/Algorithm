@@ -5,7 +5,6 @@ import java.util.Stack;
 
 public class Baek17413 {
 
-
     static void print(Stack st) {
         while (!st.empty()) {
             System.out.print(st.peek());
@@ -44,6 +43,5 @@ public class Baek17413 {
         print(st);
 
     }
-
 
 }
