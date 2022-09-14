@@ -3,19 +3,27 @@ package baekjoon;
 import java.util.Scanner;
 
 public class Baek1085 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
 
-        int x = in.nextInt();
-        int y = in.nextInt();
-        int w = in.nextInt();
-        int h = in.nextInt();
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String[] arr = sc.nextLine().split(" ");
+		int x = Integer.parseInt(arr[0]);
+		int y = Integer.parseInt(arr[1]);
+		int w = Integer.parseInt(arr[2]);
+		int h = Integer.parseInt(arr[3]);
 
-        int x_min = Math.min(x, w - x);    // x축 최소거리
-        int y_min = Math.min(y, h - y);    // y축 최소거리
+		int a = x;
+		int b = w - x;
+		int c = y;
+		int d = h-y;
 
-        // x와 y축 최소거리 중 가장 작은 값
-        System.out.println(Math.min(x_min, y_min));
-    }
+		int min = a;
+		if(b < min) min = b;
+		if(c < min) min = c;
+		if(d < min) min = d;
+
+		System.out.println(min);
+
+	}
 
 }
