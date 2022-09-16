@@ -4,26 +4,26 @@ package baekjoon;
 import java.util.Scanner;
 
 public class Baek10250 {
-    public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = Integer.parseInt(sc.nextLine());
+		for (int i = 0; i < T; i++) {
+			int H = sc.nextInt();
+			int W = sc.nextInt();
+			int N = sc.nextInt();
 
-        int T = in.nextInt();    // 테스트 케이스
+			int floor = N % H;
+			int number = N / H + 1;
 
+			int room;
 
-        for (int i = 0; i < T; i++) {
+			if (floor == 0) {
+				room = (H * 100) + number;
+			} else {
+				room = (floor * 100) + number;
+			}
+		}
 
-            int H = in.nextInt();
-            int W = in.nextInt();    // 쓸모없는 변수다.
-            int N = in.nextInt();
-
-            if (N % H == 0) {
-                System.out.println((H * 100) + (N / H));
-
-            } else {
-                System.out.println(((N % H) * 100) + ((N / H) + 1));
-            }
-        }
-    }
+	}
 }
-
